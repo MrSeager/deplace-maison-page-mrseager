@@ -6,7 +6,7 @@ import { LiaArrowCircleRightSolid } from "react-icons/lia";
 
 export default function SectionOne() {
     return(
-        <div className="border w-full pt-50 pb-20 px-50 flex flex-col gap-5 items-end">
+        <div className="w-full pt-50 pb-20 px-50 flex flex-col gap-5 items-end">
             <div className="flex flex-col uppercase text-end">
                 <h1 className="w-full font-bold text-[150px] text-base/35">Spring,</h1>
                 <div className="flex justify-end">
