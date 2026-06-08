@@ -1,9 +1,51 @@
+'use client';
 //Components
+import { useRef } from "react";
 import SectionThreeItem from "./SectionThreeItem";
 //Icons
 import { LiaArrowCircleRightSolid } from "react-icons/lia";
 
 export default function SectionThree() {
+    const ref = useRef<HTMLDivElement | null>(null);
+
+    const onMouseDown = (e: React.MouseEvent) => {
+        const el = ref.current;
+        if (!el) return;
+
+        el.dataset.isDown = "true";
+        el.dataset.startX = String(e.pageX - el.offsetLeft);
+        el.dataset.scrollLeftStart = String(el.scrollLeft);
+    };
+
+    const onMouseLeave = () => {
+        const el = ref.current;
+        if (!el) return;
+        el.dataset.isDown = "false";
+    };
+
+    const onMouseUp = () => {
+        const el = ref.current;
+        if (!el) return;
+        el.dataset.isDown = "false";
+    };
+
+    const onMouseMove = (e: React.MouseEvent) => {
+        const el = ref.current;
+        if (!el) return;
+
+        if (el.dataset.isDown !== "true") return;
+
+        e.preventDefault();
+
+        const startX = Number(el.dataset.startX);
+        const scrollLeftStart = Number(el.dataset.scrollLeftStart);
+
+        const x = e.pageX - el.offsetLeft;
+        const walk = (x - startX) * 1.5;
+
+        el.scrollLeft = scrollLeftStart - walk;
+    };
+
     return(
         <div className="w-full flex flex-col gap-15 items-end py-15">
             <h2 className="flex flex-col mx-25 text-[50px] font-semibold text-base/12">
@@ -12,7 +54,14 @@ export default function SectionThree() {
                 <span>that comes from a convergence of</span>
                 <span>arts and personalities.</span>
             </h2>
-            <div className="w-full overflow-x-scroll">
+            <div
+                ref={ref}
+                onMouseDown={onMouseDown}
+                onMouseLeave={onMouseLeave}
+                onMouseUp={onMouseUp}
+                onMouseMove={onMouseMove} 
+                className="w-full overflow-x-scroll scrollbar-hide touch-pan-x cursor-grab active:cursor-grabbing"
+            >
                 <div className="grid grid-cols-6 gap-5 w-[150%]">
                     <div />
                     <SectionThreeItem 

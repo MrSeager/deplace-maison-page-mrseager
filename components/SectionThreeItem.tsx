@@ -18,7 +18,7 @@ export default function SectionThreeItem({ img, textOne, name, price, salePrice 
                     alt="img"
                     width={500}
                     height={500}
-                    className="object-cover"
+                    className="object-cover pointer-events-none"
                 />
             </div>
             <Image 
@@ -26,6 +26,7 @@ export default function SectionThreeItem({ img, textOne, name, price, salePrice 
                 alt="logo"
                 width={75}
                 height={35}
+                className="pointer-events-none"
             />
             <h3 className="text-[13px]">{textOne}</h3>
             <h3 className="font-bold text-[50px] uppercase">{name}</h3>

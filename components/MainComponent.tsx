@@ -2,6 +2,7 @@
 import SectionOne from "./SectionOne";
 import SectionTwo from "./SectionTwo";
 import SectionThree from "./SectionThree";
+import SectionFour from "./SectionFour";
 
 export default function MainComponent() {
     return(
@@ -9,6 +10,7 @@ export default function MainComponent() {
         <SectionOne />
         <SectionTwo />
         <SectionThree />
+        <SectionFour />
       </main>
     );
 }
