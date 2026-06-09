@@ -6,7 +6,7 @@ import SectionFour from "./SectionFour";
 
 export default function MainComponent() {
     return(
-      <main className="min-h-screen shadow-lg overflow-x-hidden w-full max-w-[120rem] flex flex-col items-center">
+      <main className="min-h-screen overflow-x-hidden w-full max-w-[120rem] flex flex-col items-center">
         <SectionOne />
         <SectionTwo />
         <SectionThree />
