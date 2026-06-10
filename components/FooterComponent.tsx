@@ -1,3 +1,4 @@
+'use client';
 //Icons
 import { BsEnvelope } from "react-icons/bs";
 //Components
@@ -9,7 +10,7 @@ import { FaFacebookF, FaInstagram  } from "react-icons/fa";
 
 export default function FooterComponent() {
     return(
-        <footer className="w-full h-[25rem] max-w-[120rem] bg-black/5 pt-15 pb-5 px-10 grid grid-cols-8 gap-25 uppercase">
+        <footer className="z-10 w-full h-[25rem] max-w-[120rem] bg-[#f9f6ec] pt-15 pb-5 px-10 grid grid-cols-8 gap-25 uppercase">
             <div className="col-span-3 flex flex-col me-15 gap-3">
                 <h5 className="text-[17px]">Subscibe to newsletter</h5>
                 <BsEnvelope size={45} />
@@ -75,6 +76,8 @@ export default function FooterComponent() {
                 <button
                     type="button"
                     title="up"
+                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+
                     className="cursor-pointer duration-300 easy-in-out
                                 hover:scale-110 hover:rotate-360"
                 >
