@@ -6,15 +6,15 @@ import { LiaArrowCircleRightSolid } from "react-icons/lia";
 
 export default function SectionOne() {
     return(
-        <div className="w-full pt-50 pb-20 px-50 flex flex-col gap-5 items-end">
+        <div className="w-full pt-50 pb-20 px-3 lg:px-50 flex flex-col gap-5 items-center lg:items-end">
             <div className="flex flex-col uppercase text-end">
-                <h1 className="w-full font-bold text-[150px] text-base/35">Spring,</h1>
+                <h1 className="w-full font-bold text-[75px] md:text-[150px] text-base/20 md:text-base/35">Spring,</h1>
                 <div className="flex justify-end">
-                    <h1 className="font-bold text-[150px] text-base/35">Summer</h1>
-                    <h1 className="font-semibold text-[30px] text-base/8 mt-3">Coll.<br />2021</h1>
+                    <h1 className="font-bold text-[75px] md:text-[150px] text-base/20 md:text-base/35">Summer</h1>
+                    <h1 className="font-semibold text-[20px] md:text-[30px] text-base/5 md:text-base/8 mt-3">Coll.<br />2021</h1>
                 </div>
             </div>
-            <div className="flex gap-5 w-[80%] ms-auto relative">
+            <div className="flex gap-5 md:w-[80%] ms-auto relative">
                 <SectionOneItem 
                     img={'5ede27e188219c6c4ab2af6b_man-default-p-800.jpeg'}
                     textOne={'(01)'}
@@ -35,7 +35,7 @@ export default function SectionOne() {
             </div>
             <button
                 type="button"
-                className="cursor-pointer text-[25px] flex gap-2 items-center uppercase mt-10"
+                className="ms-auto cursor-pointer text-[25px] flex gap-2 items-center uppercase mt-10"
             >
                 <span className="duration-300 inline-block relative group">
                     Explore

@@ -10,8 +10,8 @@ import { FaFacebookF, FaInstagram  } from "react-icons/fa";
 
 export default function FooterComponent() {
     return(
-        <footer className="z-10 w-full h-[25rem] max-w-[120rem] bg-[#f9f6ec] pt-15 pb-5 px-10 grid grid-cols-8 gap-25 uppercase">
-            <div className="col-span-3 flex flex-col me-15 gap-3">
+        <footer className="z-10 w-full min-h-[25rem] max-w-[120rem] bg-[#f9f6ec] pt-15 pb-5 px-10 grid grid-cols-3 md:grid-cols-5 lg:grid-cols-8 gap-5 lg:gap-25 uppercase">
+            <div className="lg:order-1 col-span-3 hidden lg:flex flex-col me-15 gap-3">
                 <h5 className="text-[17px]">Subscibe to newsletter</h5>
                 <BsEnvelope size={45} />
                 <p className="mt-auto text-[10px]">Subscribe to our newsletter</p>
@@ -29,7 +29,7 @@ export default function FooterComponent() {
                     </button>
                 </form>
             </div>
-            <div className="flex flex-col gap-3 col-span-2">
+            <div className="order-1 md:order-2 flex flex-col gap-3 col-span-2">
                 <h5>Info</h5>
                 <CustomLink 
                     href="/"
@@ -53,7 +53,7 @@ export default function FooterComponent() {
                     Credits
                 </Link>
             </div>
-            <div className="flex flex-col gap-3 col-span-2">
+            <div className="order-3 md:order-3 flex flex-col gap-3 col-span-2">
                 <h5>Policy</h5>
                 <CustomLink 
                     href="/"
@@ -72,7 +72,7 @@ export default function FooterComponent() {
                 />
                 <p className="mt-auto">2020 Deplace Maison.</p>
             </div>
-            <div className="flex flex-col items-center justify-between">
+            <div className="row-span-2 md:row-span-1 order-2 md:order-4 flex flex-col items-center justify-between">
                 <button
                     type="button"
                     title="up"

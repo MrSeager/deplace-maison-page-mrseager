@@ -47,9 +47,9 @@ export default function SectionThree() {
     };
 
     return(
-        <div className="w-full flex flex-col gap-15 items-end py-15">
-            <h2 className="flex flex-col mx-25 text-[50px] font-semibold text-base/12">
-                <span className="flex items-center"><span className="font-normal text-[25px] underline me-15">Who we are</span> An independent <span className="mx-3 underline">brand</span> of</span>
+        <div className="w-full flex flex-col gap-15 items-center lg:items-end py-15">
+            <h2 className="flex flex-col lg:mx-25 text-[20px] md:text-[30px] lg:text-[50px] font-semibold text-base/5 md:text-base/8 lg:text-base/12">
+                <span className="flex items-center"><span className="font-normal uppercase text-[10px] md:text-[15px] lg:text-[25px] underline me-5 md:me-10 lg:me-15">Who we are</span> An independent <span className="mx-3 underline">brand</span> of</span>
                 <span>urban trekking shoes and accessories</span>
                 <span>that comes from a convergence of</span>
                 <span>arts and personalities.</span>
@@ -62,7 +62,7 @@ export default function SectionThree() {
                 onMouseMove={onMouseMove} 
                 className="w-full overflow-x-scroll scrollbar-hide touch-pan-x cursor-grab active:cursor-grabbing"
             >
-                <div className="grid grid-cols-6 gap-5 w-[150%]">
+                <div className="grid grid-cols-6 gap-5 w-[130rem]">
                     <div />
                     <SectionThreeItem 
                         img={'5ecf8747b314ba36a789e3c4_ct-army-side-p-500.jpeg'}
@@ -103,7 +103,7 @@ export default function SectionThree() {
             </div>
                 <button
                     type="button"
-                    className="cursor-pointer text-[25px] flex gap-2 items-center uppercase me-50"
+                    className="cursor-pointer text-[25px] flex gap-2 items-center uppercase ms-auto me-3 lg:me-50"
                 >
                     <span className="duration-300 inline-block relative group">
                         Show all
