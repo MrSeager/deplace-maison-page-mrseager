@@ -4,7 +4,7 @@ import CustomLink from "./CustomLink";
 export default function NavButtons() {
     return(
         <span>
-            <span className="scale-y-[2.5] z-10 fixed left-5 top-7 lg:top-35 lg:-left-10 w-[140px] h-[20px] md:w-[170px] md:h-[25px] lg:w-[150px] lg:h-[22px] lg:-rotate-90">
+            <span className="scale-y-[2.5] z-10 fixed left-5 top-7 lg:top-35 lg:-left-10 w-[140px] h-[20px] md:w-[170px] md:h-[25px] lg:w-[190px] lg:h-[25px] lg:-rotate-90">
                 <CustomLink 
                     href="/"
                     text="Deplace Maison"
