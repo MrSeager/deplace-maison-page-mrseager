@@ -1,6 +1,7 @@
 'use client';
 //Components
 import { useRef } from "react";
+import { useReveal } from "@/hooks/useReveal";
 import SectionThreeItem from "./SectionThreeItem";
 //Icons
 import { LiaArrowCircleRightSolid } from "react-icons/lia";
@@ -46,13 +47,15 @@ export default function SectionThree() {
         el.scrollLeft = scrollLeftStart - walk;
     };
 
+    useReveal();
+
     return(
         <div className="w-full flex flex-col gap-15 items-center lg:items-end py-15">
             <h2 className="flex flex-col lg:mx-25 text-[20px] md:text-[30px] lg:text-[50px] font-semibold text-base/5 md:text-base/8 lg:text-base/12">
-                <span className="flex items-center"><span className="font-normal uppercase text-[10px] md:text-[15px] lg:text-[25px] underline me-5 md:me-10 lg:me-15">Who we are</span> An independent <span className="mx-3 underline">brand</span> of</span>
-                <span>urban trekking shoes and accessories</span>
-                <span>that comes from a convergence of</span>
-                <span>arts and personalities.</span>
+                <span className="reveal flex items-center" style={{ animationDelay: "0ms" }}><span className="font-normal uppercase text-[10px] md:text-[15px] lg:text-[25px] underline me-5 md:me-10 lg:me-15">Who we are</span> An independent <span className="mx-3 underline">brand</span> of</span>
+                <span className="reveal" style={{ animationDelay: "200ms" }}>urban trekking shoes and accessories</span>
+                <span className="reveal" style={{ animationDelay: "400ms" }}>that comes from a convergence of</span>
+                <span className="reveal" style={{ animationDelay: "600ms" }}>arts and personalities.</span>
             </h2>
             <div
                 ref={ref}

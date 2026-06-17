@@ -35,6 +35,8 @@ export default function InvertCursor() {
   return (
     <div
       className="
+        hidden
+        lg:block
         pointer-events-none
         fixed top-0 left-0
         mix-blend-difference

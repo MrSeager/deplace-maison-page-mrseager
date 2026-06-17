@@ -1,17 +1,21 @@
+'use client';
 //Components
 import Image from "next/image";
 import SectionOneItem from "./SectionOneItem";
+import { useReveal } from "@/hooks/useReveal";
 //Icons
 import { LiaArrowCircleRightSolid } from "react-icons/lia";
 
 export default function SectionOne() {
+    useReveal();
+
     return(
         <div className="w-full pt-50 pb-20 px-3 lg:px-50 flex flex-col gap-5 items-center lg:items-end">
             <div className="flex flex-col uppercase text-end">
-                <h1 className="w-full font-bold text-[75px] md:text-[150px] text-base/20 md:text-base/35">Spring,</h1>
+                <h1 className="reveal w-full font-bold text-[75px] md:text-[150px] text-base/20 md:text-base/35" style={{ animationDelay: "0ms" }}>Spring,</h1>
                 <div className="flex justify-end">
-                    <h1 className="font-bold text-[75px] md:text-[150px] text-base/20 md:text-base/35">Summer</h1>
-                    <h1 className="font-semibold text-[20px] md:text-[30px] text-base/5 md:text-base/8 mt-3">Coll.<br />2021</h1>
+                    <h1 className="reveal font-bold text-[75px] md:text-[150px] text-base/20 md:text-base/35" style={{ animationDelay: "200ms" }}>Summer</h1>
+                    <h1 className="reveal font-semibold text-[20px] md:text-[30px] text-base/5 md:text-base/8 mt-3" style={{ animationDelay: "400ms" }}>Coll.<br />2021</h1>
                 </div>
             </div>
             <div className="flex gap-5 md:w-[80%] ms-auto relative">

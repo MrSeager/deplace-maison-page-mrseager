@@ -18,7 +18,7 @@ export default function NavButtons() {
                     classN="w-full h-full uppercase text-[15px]"
                 />
             </span>
-            <span className="hidden z-0 lg:fixed bottom-15 left-15 w-[150px] h-[75px]">
+            <span className="hidden lg:block z-0 fixed bottom-15 left-15 w-[150px] h-[75px]">
                 <CustomLink 
                     href="/"
                     text="Shop"
